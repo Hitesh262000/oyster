@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oyster Farm - Digital Card</title>
+<!-- FontAwesome for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e9f5e9;
+    margin: 0;
+    color: ;
+  }
+  .container {
+    max-width: 800px;
+    margin: 30px auto 60px auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgb(46 125 50 / 0.2);
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #2e7d32;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+  header img {
+    height: 90px;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+  header p {
+    margin-top: 6px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4caf50;
+  }
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav a {
+    color: #2e7d32;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #145214;
+  }
+  section {
+    margin-bottom: 35px;
+    padding: 20px 20px 30px 20px;
+    border-radius: 14px;
+    background: #f1faf1;
+    box-shadow: 0 3px 12px rgb(46 125 50 / 0.1);
+  }
+  section h2 {
+    border-bottom: 3px solid #4caf50;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+  section p,
+  section ul {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #355a35;
+  }
+  section ul {
+    padding-left: 22px;
+  }
+  section ul li {
+    margin-bottom: 8px;
+  }
+  .links-section a {
+    display: inline-block;
+    margin: 10px 18px 8px 0;
+    font-size: 1.2rem;
+    color: /*#2e7d32*/;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+  }
+  .links-section a:hover {
+    color: #145214;
+  }
+  .links-section a i {
+    margin-right: 8px;
+    font-size: 1.4rem;
+  }
+  .contact-info p {
+    font-size: 1.15rem;
+    margin: 8px 0;
+  }
+  .contact-info a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 18px 0;
+    border-radius: 8px;
+    border: 1.8px solid #a3dca3;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  form button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  form button:hover {
+    background-color: #388e3c;
+  }
+  .qr-code {
+    text-align: center;
+  }
+  .qr-code img {
+    margin-top: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(46 125 50 / 0.25);
+  }
+  .map iframe {
+    width: 100%;
+    height: 270px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 3px 14px rgb(46 125 50 / 0.15);
+  }
+  footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 25px 0 10px 0;
+    color: #4a7a4a;
+    font-weight: 500;
+  }
+  /* Responsive */
+  @media (max-width: 480px) {
+    nav a {
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+  }
+  img {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* horizontal centering */
+      align-items: center;     /* vertical centering */
+       /* optional background */
+    }
+    header {
+      background: url('1.jpg') center/cover no-repeat;
+      height: 50vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="home">
+  <header>
+   
+    <h1>Devkish Mashrooms</h1>
+    <p style="color:black;">Organic Mushroom Farming & Supply</p>
+  </header>
+
+  <nav>
+    <a href="#home" title="Home"><i class="fas fa-house"></i> </a>
+    <a href="#links" title="link"><i class="fas fa-link"></i> </a>
+    <a href="#about" title="About Us"><i class="fas fa-info-circle"></i> </a>
+    <a href="#myth-fact" title="Myth vs Fact"><i class="fas fa-question-circle"></i> </a>
+    <a href="#contact" title="Contact"><i class="fas fa-phone"></i> </a>
+    <a href="#payment" title="Payment Details"><i class="fas fa-wallet"></i> </a>
+    <a href="#youtube" title="YouTube"><i class="fab fa-youtube"></i> </a>
+    <a href="#enquiry" title="Enquiry Form"><i class="fas fa-envelope"></i> </a>
+    <a href="#share" title="Share & Connect"><i class="fas fa-qrcode"></i> </a>
+  </nav>
+<p style="text-align: center;font-size: 30px;">Welcome to Devkish Mushrooms<br>
+Bhusawal’s very own organic mushroom farm.
+We specialize in Oyster Mushrooms that are:
+<br>
+🌱 100% Organic<br>
+🚫 Grown without any pesticides<br>
+🍽️ Fresh, Healthy & Safe for daily cooking<br>
+🧺 Grown with care using sustainable farming methods<br>
+
+Founded in 2025, our mission is to bring nutritious and chemical-free mushrooms to your doorstep.</p>
+  <section class="links-section" id="links">
+    <h2>Links</h2>
+    <a href="mailto:oysterfarm.mushroom@gmail.com" ><i class="fas fa-envelope"  ></i> Email</a><br>
+    <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+    <a href="https://www.instagram.com/oyster_farmers123?igsh=MXcxZTVsbzRidW0ybg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+    <a href="https://youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a><br>
+    <a href="https://yourwebsite.com" target="_blank"><i class="fas fa-globe"></i> Website</a><br>
+    <a href="https://maps.google.com?q=Oyster+Farm+Nashik" target="_blank"><i class="fas fa-map-marker-alt"></i> Location</a><br>
+    <a href="https://g.page/your-google-review-link" target="_blank"><i class="fas fa-star"></i> Google Reviews</a><br>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>Business Name:</strong> Devkish Mashrooms</p>
+    <p><strong>Year of Establishment:</strong> 2025</p>
+    <p><strong>GST Number:</strong> Not Register</p>
+    <p><strong>Our Specialities:</strong> Organic, Hygienic, Home Delivered</p>
+    <p><strong>Why Should You Eat:</strong> High in protein, low in fat, immunity booster</p>
+    <p><strong>Benefits:</strong> Improves heart health, rich in antioxidants, aids weight loss</p>
+  </section>
+
+  <section id="myth-fact">
+    <h2>Myth vs Fact</h2>
+    <p><img src="D:\myth\top.jpg" alt="Description of image" width="500" height="300">
+      <img src="D:\myth\11.jpg" alt="Description of image" width="500" height="300">
+      <img src="D:\myth\2.jpg" alt="Description of image" width="500" height="300">
+      <img src="D:\myth\3.jpg" alt="Description of image" width="500" height="300">
+      <img src="D:\myth\4.jpg" alt="Description of image" width="500" height="300">
+      <img src="D:\myth\5.jpg" alt="Description of image" width="500" height="300">
+
+  </section>
+
+  <section class="contact-info" id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-phone"></i> Mobile 1: <a href="tel:+919145334244">+91 91453 34244</a></p>
+    <p><i class="fas fa-phone"></i> Mobile 2: <a href="tel:+918080260873">+91 80802 60873</a></p>
+    <p><i class="fas fa-map-marker-alt"></i>  Farm Location: Shri Ram Nagar, near Vittal Mandir,
+Vanjola Road, Bhusawal</p>
+<p><i class="fas fa-map-marker-alt"></i> 🏪 Counter Shop (for pickup): Mahalakshmi Dairy,
+Near Motu Somraj Chauk,Near Ashtavinayak Mandal, Bhusawal.</p>
+  </section>
+
+  <section id="payment">
+    <h2>Payment Details</h2>
+    <p><strong>UPI ID:</strong> 9145334244@upi</p>
+  </section>
+
+  <section id="youtube">
+    <h2>YouTube</h2>
+    <p>Subscribe to our channel for farming tips, tutorials, and updates!</p>
+    <a href="https://www.youtube.com/@yourchannel" target="_blank" style="font-size:1.3rem; font-weight:700; color:#d32f2f;">
+      <i class="fab fa-youtube"></i> Visit YouTube Channel
+    </a>
+  </section>
+
+  <section id="enquiry">
+  <h2>Enquiry Form</h2>
+  <form action="https://formsubmit.co/YOUR_EMAIL_ADDRESS" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    
+    <!-- Optional settings -->
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> <!-- Redirect after submit -->
+    <input type="hidden" name="_captcha" value="false"> <!-- Disable captcha -->
+    
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <section class="qr-code" id="share">
+    <h2>Share & Connect</h2>
+    <p>Scan this QR code to save our contact info or visit our website.</p>
+    <img src="D:\myth\sample.jpg" alt="QR Code" width=/>
+  </section>
+
+  <section class="map" style="margin-top: 35px;">
+    <h2>Location Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59581.21539068367!2d75.76847809901427!3d21.039648597426865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd9a61556423e47%3A0x47f833853d8103a6!2sBhusawal%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1747817765867!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Oyster Farm | Made with <i class="fas fa-heart" style="color:#e53935;"></i> by You
+</footer>
+
+<script>
+  function handleForm(event) {
+    event.preventDefault();
+    alert("Thank you for your enquiry! We will get back to you soon.");
+    event.target.reset();
+    return false;
+  }
+</script>
+
+</body>
+</html>
